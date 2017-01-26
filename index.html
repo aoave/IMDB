@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app ="myApp">
+<html ng-app = "myApp">
   <head>
     <meta charset="iso-8859-1">
     <title>OMDB</title>
@@ -30,26 +30,13 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">A-Z <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Rating</a></li>
       </ul>
       <form class="navbar-form navbar-left">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" ng-model = "search.$" class="form-control" placeholder="Search by Title, Letter, Or Rating">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">Search</button>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
         </li>
       </ul>
     </div><!-- /.navbar--->
@@ -65,7 +52,7 @@
       <th>imdbRating</th>
       <th>imdbID</th>
     </tr>
-    <tr ng-app="item in names">
+    <tr ng-repeat="item in episodes / filter:search">
       <td>{{item.Title}}</td>
       <td>{{item.Release}}</td>
       <td>{{item.Episode}}</td>
