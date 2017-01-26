@@ -1,0 +1,4 @@
+- Search bar is capable of search by title letter and rating number
+-Tables filled with the episode information
+-Written with AngularJS and bootstrap
+-Pulls Episode data from OMDB api and populates Tables.
